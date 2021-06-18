@@ -1,0 +1,18 @@
+<h1> There are {{ wordcount }} words in your text</h1>
+
+<a href = "{% url 'home' %}"> Start again </a>
+
+<h2> Your text: </h2>
+
+{{ fulltext }}
+</br>
+{{ wordcount }}
+</br>
+{{ sorted_worddictionary }}
+
+<!-- loop through the dictionary and prin its values-->
+{% for whateverword, whateveroccurances in worddictionary %}
+  </br>
+  {{ whateverword }}
+  {{ whateveroccurances }}
+{% endfor %}
